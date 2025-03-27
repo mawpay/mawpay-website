@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MawPay - Belanja</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Form Pembelian</h1>
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="deskripsi.html">Deskripsi</a>
+            <a href="katalog.html">Katalog</a>
+            <a href="belanja.html">Belanja</a>
+            <a href="kontak.html">Kontak</a>
+        </nav>
+    </header>
+    <main>
+        <form action="proses/checkout.php" method="POST">
+            <label>Nama:</label>
+            <input type="text" name="nama_pembeli" required>
+            
+            <label>Pilih Produk:</label>
+            <select name="produk">
+                <optgroup label="Pulsa & Paket Data">
+                    <option value="Pulsa 5K">Pulsa 5K - Rp5.500</option>
+                    <option value="Pulsa 10K">Pulsa 10K - Rp10.500</option>
+                    <option value="Pulsa 20K">Pulsa 20K - Rp20.500</option>
+                    <option value="Pulsa 50K">Pulsa 50K - Rp50.500</option>
+                    <option value="Paket Data 1GB">Paket Data 1GB - Rp10.000</option>
+                    <option value="Paket Data 3GB">Paket Data 3GB - Rp25.000</option>
+                    <option value="Paket Data 5GB">Paket Data 5GB - Rp40.000</option>
+                    <option value="Paket Data Unlimited">Paket Data Unlimited - Rp100.000</option>
+                </optgroup>
+                <optgroup label="Token Listrik">
+                    <option value="Token 20K">Token Listrik 20K - Rp21.000</option>
+                    <option value="Token 50K">Token Listrik 50K - Rp50.500</option>
+                    <option value="Token 100K">Token Listrik 100K - Rp100.500</option>
+                    <option value="Token 200K">Token Listrik 200K - Rp200.500</option>
+                </optgroup>
+                <optgroup label="Voucher Game">
+                    <option value="Google Play 50K">Google Play 50K - Rp52.000</option>
+                    <option value="Google Play 100K">Google Play 100K - Rp103.000</option>
+                    <option value="Steam Wallet 50K">Steam Wallet 50K - Rp52.000</option>
+                    <option value="Steam Wallet 100K">Steam Wallet 100K - Rp103.000</option>
+                    <option value="Mobile Legends 500 Diamonds">Mobile Legends 500 Diamonds - Rp125.000</option>
+                    <option value="PUBG UC 600">PUBG UC 600 - Rp130.000</option>
+                </optgroup>
+                <optgroup label="Top-Up E-Wallet">
+                    <option value="Dana 10K">Dana 10K - Rp10.000</option>
+                    <option value="Dana 50K">Dana 50K - Rp50.000</option>
+                    <option value="OVO 50K">OVO 50K - Rp50.000</option>
+                    <option value="GoPay 100K">GoPay 100K - Rp100.000</option>
+                    <option value="ShopeePay 200K">ShopeePay 200K - Rp200.000</option>
+                </optgroup>
+            </select>
+            
+            <label>Jumlah:</label>
+            <input type="number" name="jumlah" min="1" required>
+
+            <label>Metode Pembayaran:</label>
+            <select name="metode_pembayaran">
+                <option value="Transfer Bank">Transfer Bank</option>
+                <option value="E-Wallet">E-Wallet</option>
+                <option value="COD">Bayar Tunai</option>
+            </select>
+
+            <label>No HP:</label>
+            <input type="text" name="no_hp" required>
+
+            <button type="submit">Pesan Sekarang</button>
+        </form>
+    </main>
+</body>
+</html>
